@@ -18,7 +18,7 @@ Public Class ObservableCollectionAnalyzer
     Friend Shared ReadOnly Description As String = "Use ObservableCollection(Of T) instead of List(Of T) for data-binding"
     Friend Const Category = "Syntax"
 
-    Friend Shared Rule As New DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, True)
+    Friend Shared Rule As New DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, True, helpLinkUri:="https://github.com/AlessandroDelSole/DotNetAnalyzers/wiki/DNA001---List(Of-T)-is-improper-for-data-binding")
 
     Public Overrides ReadOnly Property SupportedDiagnostics As ImmutableArray(Of DiagnosticDescriptor)
         Get

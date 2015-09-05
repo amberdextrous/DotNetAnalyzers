@@ -11,11 +11,11 @@ Public Class ODataEnableQueryAnalyzer
     Inherits DiagnosticAnalyzer
 
     Public Const DiagnosticId = "DNA101"
-    Friend Shared ReadOnly Title As String = "OData warning"
+    Friend Shared ReadOnly Title As String = "<EnableQuery> is missing"
     Friend Shared ReadOnly MessageFormat As String = "'{0}' method should be decorated with EnableQuery"
     Friend Const Category = "Syntax"
 
-    Friend Shared Rule As New DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, True)
+    Friend Shared Rule As New DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, True, helpLinkUri:="https://github.com/AlessandroDelSole/DotNetAnalyzers/wiki/DNA-101---%5BEnableQuery%5D-is-missing")
 
     Public Overrides ReadOnly Property SupportedDiagnostics As ImmutableArray(Of DiagnosticDescriptor)
         Get

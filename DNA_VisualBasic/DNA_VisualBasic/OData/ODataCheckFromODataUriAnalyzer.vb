@@ -11,11 +11,11 @@ Public Class ODataCheckFromODataUriAnalyzer
     Inherits DiagnosticAnalyzer
 
     Public Const DiagnosticId = "DNA102"
-    Friend Shared ReadOnly Title As String = "OData warning"
+    Friend Shared ReadOnly Title As String = "<FromODataUri> attribute is missing"
     Friend Shared ReadOnly MessageFormat As String = "'{0}' is the first parameter and should be decorated with <FromODataUri>"
     Friend Const Category = "Syntax"
 
-    Friend Shared Rule As New DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, True)
+    Friend Shared Rule As New DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, True, helpLinkUri:="https://github.com/AlessandroDelSole/DotNetAnalyzers/wiki/DNA-102----FromODataUri--attribute-is-missing")
 
     Public Overrides ReadOnly Property SupportedDiagnostics As ImmutableArray(Of DiagnosticDescriptor)
         Get

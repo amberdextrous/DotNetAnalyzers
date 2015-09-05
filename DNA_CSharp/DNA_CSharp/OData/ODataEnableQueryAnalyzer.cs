@@ -14,11 +14,11 @@ namespace DNA.CSharp.OData
     public class ODataEnableQueryAnalyzer : DiagnosticAnalyzer
     {
         public const string DiagnosticId = "DNA101";
-        internal static readonly string Title = "OData warning";
+        internal static readonly string Title = "[EnableQuery] is missing";
         internal static readonly string MessageFormat = "'{0}' method should be decorated with EnableQuery";
         internal const string Category = "Syntax";
 
-        internal static DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, true);
+        internal static DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, true, helpLinkUri: "https://github.com/AlessandroDelSole/DotNetAnalyzers/wiki/DNA-101---%5BEnableQuery%5D-is-missing");
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

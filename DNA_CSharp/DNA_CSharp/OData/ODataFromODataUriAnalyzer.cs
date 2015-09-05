@@ -14,11 +14,11 @@ namespace DNA.CSharp.OData
     public class ODataFromODataUriAnalyzer : DiagnosticAnalyzer
     {
         public const string DiagnosticId = "DNA102";
-        internal static readonly string Title = "OData warning";
+        internal static readonly string Title = "[FromODataUri] attribute is missing";
         internal static readonly string MessageFormat = "'{0}' is the first parameter and should be decorated with [FromODataUri]";
         internal const string Category = "Syntax";
 
-        internal static DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, true);
+        internal static DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, true, helpLinkUri: "https://github.com/AlessandroDelSole/DotNetAnalyzers/wiki/DNA-102----FromODataUri--attribute-is-missing");
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

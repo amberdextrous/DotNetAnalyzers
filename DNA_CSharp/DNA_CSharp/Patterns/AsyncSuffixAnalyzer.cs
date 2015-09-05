@@ -17,7 +17,7 @@ namespace DNA.CSharp.Patterns
         static internal readonly LocalizableString Title = "Names of asynchronous methods whould end with Async";
         static internal readonly LocalizableString MessageFormat = "Name of asynchronous method '{0}' does not end with Async";
         internal const string Category = "Naming";
-        static internal DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, true, helpLinkUri: "https://github.com/AlessandroDelSole/DotNetAnalyzers/wiki/DNA200---Names-of-asynchronous-methods-whould-end-with-Async");
+        static internal DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, true, helpLinkUri: "https://github.com/AlessandroDelSole/DotNetAnalyzers/wiki/DNA-200---Names-of-asynchronous-methods-should-end-with-Async");
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

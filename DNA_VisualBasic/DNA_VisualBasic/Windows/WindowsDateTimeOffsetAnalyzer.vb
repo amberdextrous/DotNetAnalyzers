@@ -16,7 +16,7 @@ Public Class WindowsDateTimeOffsetAnalyzer
     Friend Shared ReadOnly Description As String = "Checks for improper usage of System.DateTime in Windows Runtime"
     Friend Const Category = "Naming"
 
-    Friend Shared Rule As New DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, True)
+    Friend Shared Rule As New DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, True, helpLinkUri:="https://github.com/AlessandroDelSole/DotNetAnalyzers/wiki/DNA002---Declaration-of-type-System.DateTime")
 
     Public Overrides ReadOnly Property SupportedDiagnostics As ImmutableArray(Of DiagnosticDescriptor)
         Get
