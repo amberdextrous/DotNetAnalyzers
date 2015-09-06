@@ -18,7 +18,7 @@ using Microsoft.CodeAnalysis.Formatting;
 namespace DNA.CSharp.MVVM
 {
     [ExportCodeRefactoringProvider(LanguageNames.CSharp, Name = nameof(MakeRelayCommandRefactoring)), Shared]
-    internal class MakeRelayCommandRefactoring : CodeRefactoringProvider
+    public class MakeRelayCommandRefactoring : CodeRefactoringProvider
     {
         private string Title = "Implement RelayCommand<T>";
         public async sealed override Task ComputeRefactoringsAsync(CodeRefactoringContext context)

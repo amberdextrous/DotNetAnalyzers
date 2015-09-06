@@ -18,7 +18,7 @@ using Microsoft.CodeAnalysis.Formatting;
 namespace DNA.CSharp.MVVM
 {
     [ExportCodeRefactoringProvider(LanguageNames.CSharp, Name = nameof(MakeViewModelBaseRefactoring)), Shared]
-    internal class MakeViewModelBaseRefactoring : CodeRefactoringProvider
+    public class MakeViewModelBaseRefactoring : CodeRefactoringProvider
     {
         private string Title = "Implement ViewModelBase";
         public async sealed override Task ComputeRefactoringsAsync(CodeRefactoringContext context)

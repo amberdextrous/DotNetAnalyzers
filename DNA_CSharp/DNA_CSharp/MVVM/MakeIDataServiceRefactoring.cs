@@ -18,7 +18,7 @@ using Microsoft.CodeAnalysis.Simplification;
 namespace DNA.CSharp.MVVM
 {
     [ExportCodeRefactoringProvider(LanguageNames.CSharp, Name = nameof(MakeIDataServiceRefactoring)), Shared]
-    internal class MakeIDataServiceRefactoring : CodeRefactoringProvider
+    public class MakeIDataServiceRefactoring : CodeRefactoringProvider
     {
         private string title = "Implement IDataService";
         public async sealed override Task ComputeRefactoringsAsync(CodeRefactoringContext context)

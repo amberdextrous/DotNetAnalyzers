@@ -9,7 +9,7 @@ Imports Microsoft.CodeAnalysis.VisualBasic
 Imports Microsoft.CodeAnalysis.VisualBasic.Syntax
 
 <ExportCodeRefactoringProvider(LanguageNames.VisualBasic, Name:=NameOf(MakeServiceLocatorRefactoring)), [Shared]>
-Friend Class MakeServiceLocatorRefactoring
+Public Class MakeServiceLocatorRefactoring
     Inherits CodeRefactoringProvider
 
     Public NotOverridable Overrides Async Function ComputeRefactoringsAsync(context As CodeRefactoringContext) As Task

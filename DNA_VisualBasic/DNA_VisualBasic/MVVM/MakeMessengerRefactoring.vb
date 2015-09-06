@@ -11,7 +11,7 @@ Imports Microsoft.CodeAnalysis.VisualBasic.Syntax
 Imports Microsoft.CodeAnalysis.Formatting
 
 <ExportCodeRefactoringProvider(LanguageNames.VisualBasic, Name:=NameOf(MakeMessengerRefactoring)), [Shared]>
-Friend Class MakeMessengerRefactoring
+Public Class MakeMessengerRefactoring
     Inherits CodeRefactoringProvider
 
     Public NotOverridable Overrides Async Function ComputeRefactoringsAsync(context As CodeRefactoringContext) As Task
@@ -250,7 +250,7 @@ Friend Class MakeMessengerRefactoring
 
         Dim parentBlock = TryCast(classDeclaration.Parent, ClassBlockSyntax)
 
-        Dim generator = SyntaxGenerator.GetGenerator(Document)
+        Dim generator = SyntaxGenerator.GetGenerator(document)
 
         Dim newClassBlock = SyntaxFactory.ClassBlock(SyntaxFactory.ClassStatement("Messenger"))
 
@@ -264,7 +264,7 @@ Friend Class MakeMessengerRefactoring
 
         Dim newRoot As SyntaxNode = root.ReplaceNode(parentBlock, newClassNode).NormalizeWhitespace
 
-        Dim newDocument = Document.WithSyntaxRoot(newRoot)
+        Dim newDocument = document.WithSyntaxRoot(newRoot)
 
         Return newDocument
     End Function

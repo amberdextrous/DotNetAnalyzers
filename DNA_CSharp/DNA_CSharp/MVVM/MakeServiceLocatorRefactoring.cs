@@ -18,7 +18,7 @@ using Microsoft.CodeAnalysis.Simplification;
 namespace DNA.CSharp.MVVM
 {
     [ExportCodeRefactoringProvider(LanguageNames.CSharp, Name = nameof(MakeServiceLocatorRefactoring)), Shared]
-    internal class MakeServiceLocatorRefactoring : CodeRefactoringProvider
+    public class MakeServiceLocatorRefactoring : CodeRefactoringProvider
     {
         private string Title = "Implement ServiceLocator";
         public async sealed override Task ComputeRefactoringsAsync(CodeRefactoringContext context)
